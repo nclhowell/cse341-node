@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js",
+    "test": "echo \"This is only a test\" && exit 1",
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -12,7 +13,7 @@
     "url": "git+https://github.com/nclhowell/cse341-node.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Layne Howell, Student BYU-Idaho, Course: CSE341",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nclhowell/cse341-node/issues"
