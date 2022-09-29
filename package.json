@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"This is only a test\" && exit 1",
     "dev": "nodemon server.js",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
