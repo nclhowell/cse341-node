@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"This is only a test\" && exit 1",
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/nclhowell/cse341-node#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
