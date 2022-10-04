@@ -1,7 +1,34 @@
+// Week 2
 // GET http://localhost:8080/contacts
 
 // GET http://localhost:8080/contacts/63332cdc93c226a20333dfe1
 
-//  
+// https://cse341-node-lhowell.onrender.com/contacts
 
-//
+// https://cse341-node-lhowell.onrender.com/contacts/63332cdc93c226a20333dfe1
+
+// Week 3
+
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+   "firstName":"Shmedley",
+   "lastName":"Dunbar",
+   "email":"sdunbar@whatif.com",
+   "favoriteColor":"Brown",
+   "birthday":"10031956"
+}
+
+//PUT http://localhost:8080/contacts/633b94b306a5839b70d49262 HTTP/1.1
+//content-type: application/json
+
+// {
+  //   "firstName":"ShmdedleyII",
+    // "lastName":"DunbarII",
+    // "email":"sdunbarII@gmail.com",
+    // "favoriteColor":"GreenII",
+    // "birthday":"100756"
+// }
+
+// DELETE http://localhost:8080/contacts/633b94b306a5839b70d49262
