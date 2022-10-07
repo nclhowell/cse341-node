@@ -35,7 +35,7 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:8080/contacts/6333afbb93c226a20333dfe3
+DELETE http://localhost:8080/contacts/634079ef096ec6aed4b2758a
 
 ### Render Week 3 
 POST http://cse341-node-lhowell.onrender.com/contacts HTTP/1.1
