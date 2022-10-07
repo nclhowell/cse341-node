@@ -2,6 +2,7 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res, next) => {
+  // #swagger.description = "Return all contacts from collection contacts"
   const result = await mongodb.getDb().db("cse341").collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
@@ -10,6 +11,7 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
+  // #swagger.description = "Return single contact from collection contacts"
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -25,6 +27,7 @@ const getSingle = async (req, res, next) => {
 };
 
 const createSingle = async (req, res) => {
+  // #swagger.description = "Create a single contact and append to collection contacts"
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -38,11 +41,12 @@ const createSingle = async (req, res) => {
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    res.status(500).json(response.error || "Some error occurred while creating the contact.");
   }
 };
 
 const updateSingle = async (req, res) => {
+  // #swagger.description = "Update a single contact in collection contacts"
   const userId = new ObjectId(req.params.id);
   const contact = {
     firstName: req.body.firstName,
@@ -54,24 +58,25 @@ const updateSingle = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db("cse341")
-    .collection('contacts')
+    .collection("contacts")
     .replaceOne({ _id: userId }, contact);
   console.log(response);
   if (response.modifiedCount = 1) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Catchall Error Occurred.  Could have been anything!');
+    res.status(500).json(response.error || "Catchall Error Occurred.  Could have been anything!");
   }
 };
 
 const deleteSingle = async (req, res) => {
+  // #swagger.description = "Delete a single contact in collection contacts"
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db("cse341").collection('contacts').deleteOne({ _id: userId }, true);
+  const response = await mongodb.getDb().db("cse341").collection("contacts").deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+    res.status(500).json(response.error || "Some error occurred while deleting the contact.");
   }
 };
 
