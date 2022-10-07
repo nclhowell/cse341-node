@@ -103,4 +103,4 @@ dist
 .tern-port
 
 # no swaggeage
-swagger-output.json
+# swagger-output.json
