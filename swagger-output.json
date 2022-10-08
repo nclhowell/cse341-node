@@ -47,7 +47,7 @@
                   "example": "brown"
                 },
                 "birthday": {
-                  "example": "10081956"
+                  "example": 10081956
                 }
               }
             }
