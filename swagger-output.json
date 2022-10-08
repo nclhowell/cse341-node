@@ -46,8 +46,8 @@
                 "favoriteColor": {
                   "example": "brown"
                 },
-                "birthday": {
-                  "example": 10081956
+                 "birthday": {
+                  "example": "any"
                 }
               }
             }
